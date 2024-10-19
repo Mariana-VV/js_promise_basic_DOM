@@ -35,4 +35,4 @@ function successHandler() {
 }
 
 promise1.then(successHandler).catch(errorHandler);
-promise2.then(successHandler).catch(errorHandler);
+promise2.then().catch(errorHandler);
