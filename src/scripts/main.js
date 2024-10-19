@@ -1,6 +1,6 @@
 'use strict';
 
-const promise1 = new Promise((resolve, reject) => {
+new Promise((resolve, reject) => {
   const logo = document.querySelector('.logo');
 
   logo.addEventListener('click', () => {
@@ -9,7 +9,8 @@ const promise1 = new Promise((resolve, reject) => {
 }).then(() => {
   successHandlers();
 });
-const promise2 = new Promise((resolve, reject) => {
+
+new Promise((resolve, reject) => {
   setTimeout(() => {
     reject(new Error('Error'));
   }, 3000);
@@ -32,6 +33,3 @@ function successHandlers() {
     `<div class="message">` + message + `</div>`,
   );
 }
-
-promise1();
-promise2();
