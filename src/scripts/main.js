@@ -34,5 +34,5 @@ function successHandler() {
   );
 }
 
-promise1.then(successHandler).catch(errorHandler);
-promise2.then().catch(errorHandler);
+promise1.then(successHandler);
+promise2.catch(errorHandler);
