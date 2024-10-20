@@ -1,6 +1,6 @@
 'use strict';
 
-const promise1 = new Promise((resolve) => {
+const promise1 = new Promise((resolve, reject) => {
   const logo = document.querySelector('.logo');
 
   logo.addEventListener('click', () => {
@@ -34,5 +34,5 @@ function successHandler() {
   );
 }
 
-promise1.then(successHandler);
-promise2.catch(errorHandler);
+promise1.then(successHandler).catch(errorHandler);
+promise2.then(successHandler).catch(errorHandler);
